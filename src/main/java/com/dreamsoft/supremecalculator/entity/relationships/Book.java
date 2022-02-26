@@ -1,13 +1,13 @@
 package com.dreamsoft.supremecalculator.entity.relationships;
 
 import com.dreamsoft.supremecalculator.entity.BaseEntity;
+import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Data
 public class Book extends BaseEntity {
 
     @Column(nullable=false)
@@ -17,5 +17,6 @@ public class Book extends BaseEntity {
     @JoinColumn(name="library_id")
     private Library library;
 
-    // standard constructor, getter, setter
+    @ManyToMany(mappedBy = "books")
+    private List<Author> authors;
 }

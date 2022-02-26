@@ -15,4 +15,8 @@ public class CalculationHistory extends BaseEntity{
 //    @RestResource(path = "operation", rel="operation")
 //    private Operation operation;
 
+    private String calculationBody;
+
+    private String calculationAnswer;
+
 }
