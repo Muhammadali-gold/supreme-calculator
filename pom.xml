@@ -135,7 +135,14 @@
             <version>3.6.0</version>
         </dependency>
 
-<!--        <dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.webjars/mathjs -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>mathjs</artifactId>
+            <version>6.0.2</version>
+        </dependency>
+
+        <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-devtools</artifactId>-->
 <!--        </dependency>-->
