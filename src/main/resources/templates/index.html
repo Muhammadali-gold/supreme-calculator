@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Supreme Calculator</title>
+<!--    <style>-->
+<!--      .grid-container {-->
+<!--        display: grid;-->
+<!--        grid-template-columns: auto auto auto auto;-->
+<!--        background-color: #ededed;-->
+<!--        /* padding: 10px; */-->
+<!--      }-->
+<!--      .grid-item {-->
+<!--        background-color: rgba(255, 255, 255, 0.8);-->
+<!--        border: 1px solid rgba(228, 228, 228, 0.8);-->
+<!--        padding: 20px;-->
+<!--        font-size: 30px;-->
+<!--        text-align: center;-->
+<!--      }-->
+<!--      .grid-item-x {-->
+<!--        background-color: rgba(255, 255, 255, 0.8);-->
+<!--        border: 1px solid rgba(228, 228, 228, 0.8);-->
+<!--        padding: 20px;-->
+<!--        font-size: 30px;-->
+<!--        text-align: center;-->
+<!--        grid-column: 3/5;-->
+<!--        grid-row: 5;-->
+<!--      }-->
+<!--      .grid-item-y {-->
+<!--        background-color: rgba(255, 255, 255, 0.8);-->
+<!--        border: 1px solid rgba(228, 228, 228, 0.8);-->
+<!--        padding: 20px;-->
+<!--        font-size: 30px;-->
+<!--        text-align: center;-->
+<!--        grid-column: 1;-->
+<!--        grid-row: 5;-->
+<!--      }-->
+<!--      .grid-item-z {-->
+<!--        background-color: rgba(255, 255, 255, 0.8);-->
+<!--        border: 1px solid rgba(228, 228, 228, 0.8);-->
+<!--        padding: 20px;-->
+<!--        font-size: 30px;-->
+<!--        text-align: center;-->
+<!--        grid-column: 2;-->
+<!--        grid-row: 5;-->
+<!--      }-->
+<!--      .lgreen {-->
+<!--        background-color: rgba(190, 235, 230, 0.8);-->
+<!--      }-->
+<!--      .dgreen {-->
+<!--        background-color: rgba(40, 175, 161, 0.8);-->
+<!--      }-->
+<!--    </style>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="container-fluid">
+    <div class="calculator mx-auto" style="max-width: 400px;">
+        <div class="output h42vh">
+            <div  class="text-center " style="height:70%;">
+
+            </div>
+
+            <div class="requestInputAndAnswer w100m">
+                <div class="requestHistory text-end" >
+                    <p class="requestHistoryLabel">5*50+9</p>
+                    <input class="requestInputAndAnswerInput" type="text" value="259">
+                </div>
+            </div>
+        </div>
+        <div class="input" style="max-height:58vh;">
+            <div class="grid-container">
+                <button class="button grid-item button-bg-grey" onclick="operation('C')">C</button>
+                <button class="button grid-item button-bg-grey" onclick="operation('±')">±</button>
+                <button class="button grid-item button-bg-grey" onclick="operation('%')">%</button>
+                <button class="button grid-item lgreen button-bg-light-green" onclick="operation('+')">+</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('1')">1</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('2')">2</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('3')">3</button>
+                <button class="button grid-item lgreen button-bg-light-green" onclick="operation('-')">−</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('4')">4</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('5')">5</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('6')">6</button>
+                <button class="button grid-item lgreen button-bg-light-green" onclick="operation('×')">×</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('7')">7</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('8')">8</button>
+                <button class="button grid-item button-bg-grey" onclick="btnClicked('9')">9</button>
+                <button class="button grid-item lgreen button-bg-light-green" onclick="operation('/')">/</button>
+                <button class="button grid-item-y button-bg-grey" onclick="btnClicked('0')">0</button>
+                <button class="button grid-item-z button-bg-grey" onclick="btnClicked('.')">.</button>
+                <button class="button grid-item-x dgreen button-bg-dark-green" onclick="operation('=')">=</button>
+</div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>-->
+<script th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+</body>
+</html>
